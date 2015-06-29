@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<title>Vista Preliminar en la miniatura de un Video Youtube</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+	</head>
+	<body>
+
+		<div class="container">
+
+				<h1>Vista Preliminar en la miniatura de un Video Youtube</h1>
+
+			    <div class="row">
+
+			    	<h4 class="container text-center">Videos</h4>
+
+			        <div class="col-md-2">			          
+
+			          <div class="tmbnl">
+							<a href="https://www.youtube.com/watch?v=dU26cGlmkRg" target="_blank">
+								<img src="https://i.ytimg.com/vi/dU26cGlmkRg/2.jpg" alt="" title="" width="150" class="preViewTube"/>
+								<span>Armin van Buuren feat. Fiora - Waiting For The Night</span>
+							</a>
+					  </div>
+
+			        </div>
+
+			        <div class="col-md-2">			          
+
+			          <div class="tmbnl">
+							<a href="https://www.youtube.com/watch?v=dhZUsNJ-LQU" target="_blank">
+								<img src="https://i.ytimg.com/vi/dhZUsNJ-LQU/2.jpg" alt="" title="" width="150" class="preViewTube"/>
+								<span>Oasis - Stop Crying Your Heart Out</span>
+							</a>
+					  </div>
+
+			        </div>
+
+			        <div class="col-md-2">			          
+
+			          <div class="tmbnl">
+							<a href="https://www.youtube.com/watch?v=4ctqJTbqKi0" target="_blank">
+								<img src="https://i.ytimg.com/vi/4ctqJTbqKi0/2.jpg" alt="" title="" width="150" class="preViewTube"/>
+								<span>Metallica - Cyanide (Live)</span>
+							</a>
+					  </div>
+
+			        </div>
+
+			        <div class="col-md-2">			          
+
+			          <div class="tmbnl">
+							<a href="https://www.youtube.com/watch?v=BJJy44P1UVs" target="_blank">
+								<img src="https://i.ytimg.com/vi/BJJy44P1UVs/2.jpg" alt="" title="" width="150" class="preViewTube"/>
+								<span>Richard Ashcroft - Lord I've Been Trying</span>
+							</a>
+					  </div>
+
+			        </div>
+
+			        <div class="col-md-2">			          
+
+			          <div class="tmbnl">
+							<a href="https://www.youtube.com/watch?v=596qaxm-u4o" target="_blank">
+								<img src="https://i.ytimg.com/vi/596qaxm-u4o/2.jpg" alt="" title="" width="150" class="preViewTube"/>
+								<span>Cake - I Will Survive</span>
+							</a>
+					  </div>
+
+			        </div>
+
+			        <div class="col-md-2">			          
+
+			          <div class="tmbnl">
+							<a href="https://www.youtube.com/watch?v=Z8V5GfFeUDs" target="_blank">
+								<img src="https://i.ytimg.com/vi/Z8V5GfFeUDs/2.jpg" alt="" title="" width="150" class="preViewTube"/>
+								<span>Armin van Buuren - Ping Pong</span>
+							</a>
+					  </div>
+
+			        </div>
+
+			    </div>
+
+
+			    <br><br>		
+
+				
+			<footer>
+				<div class="container text-center">
+					<p class="text-muted credit">
+						Desarrollado por <a href="http://www.collectivecloudperu.com" target="blank">Collective Cloud Peru</a>
+					</p>
+			  	</div>				
+			</footer>
+
+		</div>
+		<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+
+		<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+
+		<script>
+			hljs.initHighlightingOnLoad();
+		</script>
+
+		<script src="js/script.js"></script>
+
+		<script>
+			$(document).ready(function() {
+
+				$('.preViewTube').PreViewTube();
+
+				// or
+
+				$('.preViewTube-constant').PreViewTube({
+					'interval' : 500,
+					'mode' : 'constant'
+				});
+
+				$('.preViewTube-speed').PreViewTube({
+					'interval' : 500
+				});
+
+			});
+
+		</script>
+	</body>
+</html>
