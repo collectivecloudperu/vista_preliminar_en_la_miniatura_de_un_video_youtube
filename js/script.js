@@ -9,63 +9,64 @@
 			'mode' : 'hover'
 		}, opts);
 
-		//Iterate over matched elements
+		//Iteramos sobre los elementos coincidentes
 		return this.each(function() {
 
 			var $this = $(this);
 
 			var loop;
 
-			// get the image source
+			// obtenemos la fuente de la imagen
 			var imgSrc = $this.attr("src");
-			// get the image filename
+			// obtenemos el nombre del archivo
 			var fileName = imgSrc.match(/(\w*)\.jpg$/);
 
-			// get the imgae number
+			// obtenemos el numero de la imagen
 			if(fileName[1] == 'default') {
-				// if default set to 1
+				// Hacemos que por defecto el valor sea 1
 				var num = 1;
 			} else {
 				var num = parseInt(fileName[1]);
 			}
 
-			// declare the loop
+			// Declaramos un loop
 			var infiniteLoop = null;
 
-			// check for mode [ hover || constant ]
+			// Comprobamos el modo hover / constante
 			if(settings.mode == 'constant') {
 
 				loop = setInterval(function() {
-					// loop - one, two, trí
+					// loop - 1, 2, 3
 					if(num == 3) {
 						num = 0;
 					} else {
 						num++;
 					}
-					// set the image source on the element
+					
 					$this.attr("src", imgSrc.replace(/(\d\.jpg|\w*\.jpg)$/, +num + '.jpg'));
 
 				}, settings.interval);
-				// interval/delay loop
+				
 
-			} else {// hover mode
+			} else {// modo hover
 
 				$this.hover(function() {
 
 					loop = setInterval(function() {
-						// loop - one, two, trí
+						// loop - 1, 2, 3
 						if(num == 3) {
 							num = 0;
 						} else {
 							num++;
 						}
-						// set the image source on the element
+						
 						$this.attr("src", imgSrc.replace(/(\d\.jpg|\w*\.jpg)$/, +num + '.jpg'));
 
 					}, settings.interval);
 
-				}, function() {// mouse out
-					// stop loop
+				}, function() {
+					// Al retirarl el mouse
+					// Detenemos el loop
 					clearInterval(loop);
 
 				});
